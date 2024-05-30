@@ -11,17 +11,16 @@ body {
 }
 
 main {
-    margin-top: 128px; /* Add margin to offset the fixed header height */
+    margin-top: 120px; /* Add margin to offset the fixed header height */
 }
 
 header {
     background-color: white;
-    min-height: 80px;
     position: fixed; /* Fix the header to the top */
     width: 100%; /* Ensure it takes the full width of the viewport */
     top: 0; /* Position it at the top of the viewport */
     z-index: 1000; /* Ensure it is above other content */
-    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    border-bottom: 1px solid lightgray;
 }
 
 .openImg {
@@ -34,11 +33,12 @@ header {
 }
 
 nav {
-    height: 100%;
+    background-color: white;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    z-index: 1000;
+    z-index: 1001;
+    height: 80px;
 }
 
 nav ul {
@@ -48,8 +48,12 @@ nav ul {
     padding: 0;
 }
 
+#logoBox {
+    display: flex;
+}
+
 .logo {
-    height: 75px;
+    height: 65px;
     width: auto;
     margin: 4px;
 }
@@ -57,7 +61,7 @@ nav ul {
 nav ul li {
     display: flex;
     align-items: center;
-    height: 100%;
+    height: 80px;
 }
 
 nav ul li a {
@@ -81,6 +85,33 @@ nav ul li a:hover {
     color: mediumseagreen;
 }
 
+.dropdownProducts {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: white;
+    border: 1px solid lightgray;
+    width: max-content;
+}
+
+.dropdownProducts li {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#products:hover .dropdownProducts {
+    display: block;
+}
+
+.dropdownProducts li a {
+    font-size: 16px;
+}
+
+.dropdownProducts li a:hover {
+    font-size: 16px;
+}
+
 .contactButton button {
     padding: 10px;
     font-size: 16px;
@@ -98,6 +129,10 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
+#sidebarContact {
+    display: none;
+}
+
 @media(max-width: 1000px) {
     .open {
         display: block;
@@ -110,26 +145,57 @@ nav ul li a:hover {
         width: 100%;
         background-color: white;
         transition: .5s;
-        z-index: -1;
+        z-index: -999;
+        border-bottom: 1px solid lightgray ;
     }
 
-    nav ul li {
+    nav ul li a{
         padding: 20px;
     }
 
     #sidebarActive:checked ~ ul {
         display: flex;
-        top: 128px;
+        top: 120px;
+    }
+}
+
+@media(max-width: 500px) {
+    #topContact {
+        display: none;
+    }
+    #sidebarContact {
+        display: block;
+    }
+}
+
+@media(max-width: 350px){
+    .logo {
+        height: 50px;
     }
 }
 
 .sect1 {
-    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
 }
 
-.image {
-    width: 100%;
-    display: block;
+.sect1 p {
+    margin: 0;
+    color: black;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.sect1 img {
+    height: 300px;
+    margin-top: 100px;
+}
+
+.textBox {
+    padding: 2%;
 }
 
 .smallSect {

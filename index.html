@@ -31,21 +31,34 @@
             <label for="sidebarActive" class="open">
                 <img src="./images/open.png" class="openImg">
             </label>
-            <a href="index.html"><img class="logo" title="Vision Palace" src="./images/logo.png"
+            <a id="logoBox" href="index.html"><img class="logo" title="Vision Palace" src="./images/logo.png"
                     alt="Vision Palace Logo"></a>
             <ul>
                 <li><a href="./index.html" class="current">Home</a></li>
                 <li><a href="./aboutus.html">About Us</a></li>
                 <li><a href="#glasses2">Idk</a></li>
-                <li><a href="#glasses3">Products</a></li>
+                <li id="products">
+                    <a href="#glasses3"">Products</a>
+                    <ul class="dropdownProducts">
+                        <li><a href="#">Eyeglasses</a></li>
+                        <li><a href="#">Sunglasses</a></li>
+                        <li><a href="#">Contact Lenses</a></li>
+                    </ul>
+                </li>
+                <li><a id="sidebarContact" class="contactButton" href="./book.html"><button>CONTACT US</button></a></li>
             </ul>
-            <a class="contactButton" href="./book.html"><button>CONTACT US</button></a>
+            <a id="topContact" class="contactButton" href="./book.html"><button>CONTACT US</button></a>
         </nav>
     </header>
     <main>
         <div class="sect1">
-            <img class="image" src="./images/opto.jpg">
+            <div class="textBox">
+                <p>Accepting New Patients</p>
+                <p>Call Today!</p>
+            </div>
+            <img src="./images/eye-doctor.png">
         </div>
+        
         <div class="sect2">
             <div class="addressFlexBox">
                 <iframe
