@@ -12,56 +12,82 @@
 
 <body>
     <header>
+        <div class="smallSect">
+            <div class="smallAddress">
+                <img src="./images/locationIcon.png">
+                <a href="https://www.google.com/maps/dir//3751+Matlock+Rd+%23115,+Arlington,+TX+76015/@32.6831472,-97.1968039,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x864e62b87f9691ff:0xad3b7b87c87afb1d!2m2!1d-97.1144539!2d32.6831742?entry=ttu"
+                    target="_blank" rel="noopener noreferrer">
+                    3751 Matlock Rd. #115, Arlington, TX 76015
+                </a>
+            </div>
+            <p class="smallLine">|</p>
+            <div class="smallPhone">
+                <img src="./images/phoneIcon.png">
+                <a href="tel:+8173759000">(817) 375-9000</a>
+            </div>
+        </div>
         <nav>
-            <a href="./index.html"><img class="logo" title="Vision Palace" src="./images/logo.png"
+            <input type="checkbox" id="sidebarActive">
+            <label for="sidebarActive" class="open">
+                <img src="./images/open.png" class="openImg">
+            </label>
+            <a id="logoBox" href="index.html"><img class="logo" title="Vision Palace" src="./images/logo.png"
                     alt="Vision Palace Logo"></a>
             <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./aboutus.html">About Us</a></li>
                 <li><a href="#glasses2">Idk</a></li>
-                <li><a href="#glasses3">Products</a></li>
+                <li id="products">
+                    <a href="#" onclick="return false;">Products</a>
+                    <ul class="dropdownProducts">
+                        <li><a href="#">Eyeglasses</a></li>
+                        <li><a href="#">Sunglasses</a></li>
+                        <li><a href="#">Contact Lenses</a></li>
+                    </ul>
+                </li>
+                <li><a id="sidebarContact" class="contactButton" href="./book.html"><button>CONTACT US</button></a></li>
             </ul>
-            <a class="contactButton" href="./book.html"><button>CONTACT US</button></a>
+            <a id="topContact" class="contactButton" href="./book.html"><button>CONTACT US</button></a>
         </nav>
     </header>
     <main>
         <div class="top">
-            <div class="topTop">
-                <p>Schedule an Appointment Today</p>
-                <img src="./images/scheduleIcon.png">
-            </div>
+            <p>Schedule an Appointment Today</p>
+            <img src="./images/scheduleIcon.png">
             <p class="topBottom">Contact Vision Palace to schedule an appointment
                 or to request any additional information regarding our services. </p>
         </div>
         <div class="bottom">
             <div class="left">
                 <p>Appointments are Scheduled:</p>
-                <ul class="mainList">
-                    <li>
-                        <div class="mainListItem">
-                            <img src="./images/personIcon.png">In Person
-                        </div>
-                        <ul class="notMainList">
-                            <li>Address: 3751 Matlock Rd. #115, Arlington, TX 76015</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="mainListItem">
-                            <img src="./images/phoneIcon2.png">By Phone Call
-                        </div>
-                        <ul class="notMainList">
-                            <li>Phone Number: (817) 375-9000</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="mainListItem">
-                            <img src="./images/emailIcon.png">By Email
-                        </div>
-                        <ul class="notMainList">
-                            <li>Email Address: vision.palace@yahoo.com</li>
-                        </ul>
-                    </li>
-                </ul>
+                <div class="mainlistContainer">
+                    <ul class="mainList">
+                        <li>
+                            <div class="mainListItem">
+                                <img src="./images/personIcon.png"><span class="mainListText">In Person</span>
+                            </div>
+                            <ul class="notMainList">
+                                <li>Address: 3751 Matlock Rd. #115, Arlington, TX 76015</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="mainListItem">
+                                <img src="./images/phoneIcon2.png"><span class="mainListText">By Phone Call</span>
+                            </div>
+                            <ul class="notMainList">
+                                <li>Phone Number: (817) 375-9000</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="mainListItem">
+                                <img src="./images/emailIcon.png"><span class="mainListText">By Email</span>
+                            </div>
+                            <ul class="notMainList">
+                                <li>Email Address: vision.palace@yahoo.com</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="right">
                 <p>Contact Us</p>
@@ -88,7 +114,8 @@
                     </div>
                     <fieldset class="customerStatus">
                         <div class="optionOne">
-                            <input type="radio" id="existingCustomer" value="ExistingCustomer" name="customerType" required>
+                            <input type="radio" id="existingCustomer" value="ExistingCustomer" name="customerType"
+                                required>
                             <label for="existingCustomer">Existing Customer</label>
                         </div>
                         <div class="optionTwo">

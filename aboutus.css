@@ -10,41 +10,89 @@ body {
     padding: 0;
 }
 
+main {
+    margin-top: 120px; /* Add margin to offset the fixed header height */
+}
+
 header {
     background-color: white;
-    min-height: 80px;
     position: fixed; /* Fix the header to the top */
     width: 100%; /* Ensure it takes the full width of the viewport */
     top: 0; /* Position it at the top of the viewport */
     z-index: 1000; /* Ensure it is above other content */
-    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+
+.smallSect {
+    box-sizing: border-box;
+    background-color: mediumseagreen;
+    height: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    z-index: 1000;
+}
+
+.smallSect img {
+    height: 18px;
+}
+
+.smallAddress, .smallPhone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.smallPhone a, .smallAddress a {
+    color: white;
+    text-decoration: none;
+}
+
+.smallPhone a:hover, .smallAddress a:hover {
+    text-decoration: underline;
+}
+
+.openImg {
+    width: 40px;
+}
+
+.open, #sidebarActive {
+    display: none;
+    cursor: pointer;
 }
 
 nav {
-    height: 100%;
+    background-color: white;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    z-index: 1001;
+    height: 80px;
+    border-bottom: 1px solid lightgray;
 }
 
 nav ul {
     display: flex;
     align-items: center;
-    height: 100%;
     margin: 0;
     padding: 0;
-    list-style: none;
+}
+
+#logoBox {
+    display: flex;
 }
 
 .logo {
-    height: 75px;
+    height: 65px;
     width: auto;
+    margin: 4px;
 }
 
 nav ul li {
     display: flex;
     align-items: center;
-    height: 100%;
+    height: 80px;
 }
 
 nav ul li a {
@@ -62,11 +110,114 @@ nav ul li a {
 nav ul li a:hover {
     font-size: 28px;
     color: mediumseagreen;
+    
 }
 
-main {
-    margin-top: 80px; /* Add margin to offset the fixed header height */
-    padding: 0;
+.current {
+    color: mediumseagreen;
+}
+
+.dropdownProducts {
+    display: block;
+    position: absolute;
+    top: -32px;
+    background-color: white;
+    border: 1px solid lightgray;
+    width: max-content;
+    transition: .3s;
+    z-index: -999;
+}
+
+.dropdownProducts li {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#products:hover .dropdownProducts {
+    top: 119px;
+}
+
+#products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#products a {
+    display: flex;
+    align-items: center;
+}
+
+.dropdownProducts li a {
+    font-size: 16px;
+    padding: 15px;
+}
+
+.dropdownProducts li a:hover {
+    font-size: 16px;
+}
+
+.contactButton button {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 3px solid mediumseagreen;
+    border-radius: 8px;
+    color: mediumseagreen;
+    background-color: transparent;
+    transition: .3s;
+}
+
+.contactButton button:hover {
+    background-color: mediumseagreen;
+    color: white;
+    cursor: pointer;
+}
+
+#sidebarContact {
+    display: none;
+}
+
+@media(max-width: 1000px) {
+    .open {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: -256%;
+        width: 100%;
+        background-color: white;
+        transition: .5s;
+        z-index: -999;
+        border-bottom: 1px solid lightgray ;
+    }
+
+    nav ul li a{
+        padding: 20px;
+    }
+
+    #sidebarActive:checked ~ ul {
+        display: flex;
+        top: 120px;
+    }
+}
+
+@media(max-width: 500px) {
+    #topContact {
+        display: none;
+    }
+    #sidebarContact {
+        display: block;
+    }
+}
+
+@media(max-width: 350px){
+    .logo {
+        height: 50px;
+    }
 }
 
 .pageTitle {

@@ -22,6 +22,37 @@ header {
     z-index: 1000; /* Ensure it is above other content */
 }
 
+.smallSect {
+    box-sizing: border-box;
+    background-color: mediumseagreen;
+    height: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    z-index: 1000;
+}
+
+.smallSect img {
+    height: 18px;
+}
+
+.smallAddress, .smallPhone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.smallPhone a, .smallAddress a {
+    color: white;
+    text-decoration: none;
+}
+
+.smallPhone a:hover, .smallAddress a:hover {
+    text-decoration: underline;
+}
+
 .openImg {
     width: 40px;
 }
@@ -144,10 +175,6 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-#sidebarContact {
-    display: none;
-}
-
 @media(max-width: 1000px) {
     .open {
         display: block;
@@ -163,23 +190,28 @@ nav ul li a:hover {
         z-index: -999;
         border-bottom: 1px solid lightgray ;
     }
-
-    nav ul li a{
-        padding: 20px;
+    
+    nav ul li{
+        height: 60px;
     }
 
     #sidebarActive:checked ~ ul {
         display: flex;
         top: 120px;
     }
-}
 
-@media(max-width: 500px) {
-    #topContact {
+    .dropdownProducts {
         display: none;
     }
-    #sidebarContact {
+
+    .dropdownProducts li a {
+        padding: 10px;
+    }
+
+    #products:hover .dropdownProducts {
         display: block;
+        width: 100%;
+        top: 100%;
     }
 }
 
@@ -211,37 +243,6 @@ nav ul li a:hover {
 
 .textBox {
     padding: 2%;
-}
-
-.smallSect {
-    box-sizing: border-box;
-    background-color: mediumseagreen;
-    height: 40px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    z-index: 1000;
-}
-
-.smallSect img {
-    height: 18px;
-}
-
-.smallAddress, .smallPhone {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.smallPhone a, .smallAddress a {
-    color: white;
-    text-decoration: none;
-}
-
-.smallPhone a:hover, .smallAddress a:hover {
-    text-decoration: underline;
 }
 
 .sect2 {
