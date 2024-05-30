@@ -20,7 +20,6 @@ header {
     width: 100%; /* Ensure it takes the full width of the viewport */
     top: 0; /* Position it at the top of the viewport */
     z-index: 1000; /* Ensure it is above other content */
-    border-bottom: 1px solid lightgray;
 }
 
 .openImg {
@@ -39,6 +38,7 @@ nav {
     align-items: center;
     z-index: 1001;
     height: 80px;
+    border-bottom: 1px solid lightgray;
 }
 
 nav ul {
@@ -79,6 +79,7 @@ nav ul li a {
 nav ul li a:hover {
     font-size: 28px;
     color: mediumseagreen;
+    
 }
 
 .current {
@@ -86,12 +87,14 @@ nav ul li a:hover {
 }
 
 .dropdownProducts {
-    display: none;
+    display: block;
     position: absolute;
-    top: 100%;
+    top: -32px;
     background-color: white;
     border: 1px solid lightgray;
     width: max-content;
+    transition: .3s;
+    z-index: -999;
 }
 
 .dropdownProducts li {
@@ -101,11 +104,23 @@ nav ul li a:hover {
 }
 
 #products:hover .dropdownProducts {
-    display: block;
+    top: 119px;
+}
+
+#products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#products a {
+    display: flex;
+    align-items: center;
 }
 
 .dropdownProducts li a {
     font-size: 16px;
+    padding: 15px;
 }
 
 .dropdownProducts li a:hover {
