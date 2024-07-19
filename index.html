@@ -4,96 +4,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vision Palace | Arlington TX</title>
-    <meta name="author" content="Vincent Dang">
+    <title>Vincent Dang | SWE</title>
+    <meta author="Vincent Dang">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="./images/logoicon.png" type="image/png">
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon">
 </head>
 
 <body>
     <header>
-        <div class="smallSect">
-            <div class="smallAddress">
-                <img src="./images/locationIcon.png">
-                <a href="https://www.google.com/maps/dir//3751+Matlock+Rd+%23115,+Arlington,+TX+76015/@32.6831472,-97.1968039,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x864e62b87f9691ff:0xad3b7b87c87afb1d!2m2!1d-97.1144539!2d32.6831742?entry=ttu"
-                    target="_blank" rel="noopener noreferrer">
-                    3751 Matlock Rd. #115, Arlington, TX 76015
-                </a>
-            </div>
-            <p class="smallLine">|</p>
-            <div class="smallPhone">
-                <img src="./images/phoneIcon.png">
-                <a href="tel:+8173759000">(817) 375-9000</a>
-            </div>
-        </div>
         <nav>
-            <input type="checkbox" id="sidebarActive">
-            <label for="sidebarActive" class="open">
-                <img src="./images/open.png" class="openImg">
-            </label>
-            <a id="logoBox" href="index.html"><img class="logo" title="Vision Palace" src="./images/logo.png"
-                    alt="Vision Palace Logo"></a>
-            <ul>
-                <li><a href="./index.html" class="current">Home</a></li>
-                <li><a href="./aboutus.html">About Us</a></li>
-                <li><a href="#glasses2">Idk</a></li>
-                <li id="products">
-                    <a href="#" onclick="return false;">Products</a>
-                    <ul class="dropdownProducts">
-                        <li><a href="#">Eyeglasses</a></li>
-                        <li><a href="#">Sunglasses</a></li>
-                        <li><a href="#">Contact Lenses</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <a class="contactButton" href="./book.html"><button>CONTACT US</button></a>
+            <div id="navLeft">
+                <p>vincentdang.com</p>
+            </div>
+            <div id="navRight">
+                <div class="links">
+                    <img src="./images/linkedinIcon.png" alt="LinkedIn">
+                    <div class="dropDown">
+                        <p>Check Out My</p>
+                        <a href="https://www.linkedin.com/in/vdangcs/" target="_blank" rel="noopener noreferrer">
+                            LinkedIn!</a>
+                    </div>
+                </div>
+                <div class="links">
+                    <img src="./images/emailIcon.png" alt="Email">
+                    <div class="dropDown">
+                        <p>Email Me!</p>
+                        <a href="mailto:vdang1120@gmail.com">vdang1120@gmail.com</a>
+                    </div>
+                </div>
+                <div class="links">
+                    <img src="./images/githubIcon.png" alt="GitHub">
+                    <div class="dropDown">
+                        <p>Check Out My</p>
+                        <a href="https://github.com/vdang1120" target="_blank" rel="noopener noreferrer"> GitHub!</a>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
-        <div class="sect1">
-            <div class="textBox">
-                <p>Accepting New Patients</p>
-                <p>Call Today!</p>
+        <div id="titleCont">
+            <div id="title">
+                <h2>👋😄 Hi! I'm</h2>
+                <h1>Vincent Dang 💫</h1>
             </div>
-            <img src="./images/eye-doctor.png">
+            <img src="./images/me.jpg" id="titleImg">
         </div>
-
-        <div class="sect2">
-            <div class="addressFlexBox">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9498.146047826185!2d-97.12077440849066!3d32.68334001011119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e62b87f9691ff%3A0xad3b7b87c87afb1d!2sVision%20Palace!5e0!3m2!1sen!2sus!4v1716413969166!5m2!1sen!2sus"
-                    width="500" height="300" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <div class="storeHours">
-                    <p class="hoursTitle"><u>Store Hours</u></p>
-                    <div class="hoursBox">
-                        <ul class="days">
-                            <li>Monday</li>
-                            <li>Tuesday</li>
-                            <li>Wednesday</li>
-                            <li>Thursday</li>
-                            <li>Friday</li>
-                            <li>Saturday</li>
-                            <li>Sunday</li>
-                        </ul>
-                        <ul class="hours">
-                            <li>10:30AM - 5PM</li>
-                            <li>10:30AM - 5PM</li>
-                            <li>10:30AM - 5PM</li>
-                            <li>10:30AM - 5PM</li>
-                            <li>CLOSED</li>
-                            <li>10:30AM - 3PM</li>
-                            <li>CLOSED</li>
-                        </ul>
+        <div id="resumeSect">
+            <div id="resumeLinks">
+                <a href="#" id="viewResume">View My Resume ►</a>
+                <p>|</p>
+                <a href="#" id="downloadResume">Download My Resume ►</a>
+            </div>
+            <p id="or">OR</p>
+            <p id="explore">▼ Explore My Website! ▼</p>
+        </div>
+        <div id="about">
+            <div id="aboutContainer">
+                <h1>About Me 🤓</h1>
+                <p>I'm an undergraduate computer science student studying at the
+                    University of Texas at Arlington an ambitious software engineer driven by my passions for technology
+                    and problem-solving. I'm always eager to learn and excited to build interesting projects and
+                    innovative solutions.</p>
+            </div>
+            <img src="./images/uta.png" alt="UTA Logo">
+        </div>
+        <div id="skillsSect">
+            <h1>Skills ⚙️💪</h1>
+            <div id="skillBoxContCont">
+                <div id="skillBoxCont">
+                    <div class="skillBox" id="c">
+                        <img src="./images/C_Logo.png" alt="">
+                        <p>C</p>
+                    </div>
+                    <div class="skillBox" id="python">
+                        <img src="./images/python.png" alt="">
+                        <p>Python</p>
+                    </div>
+                    <div class="skillBox" id="java">
+                        <img src="./images/java.png" alt="">
+                        <p>Java</p>
+                    </div>
+                    <div class="skillBox" id="js">
+                        <img src="./images/js.png" alt="">
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="skillBox" id="html">
+                        <img src="./images/html.png" alt="">
+                        <p>HTML</p>
+                    </div>
+                    <div class="skillBox" id="css">
+                        <img src="./images/css.png" alt="">
+                        <p>CSS</p>
                     </div>
                 </div>
             </div>
         </div>
+        <div id="projectSect">
+            <h1>Projects 👨‍💻💻</h1>
+            <div class="projectBox">
+                <div class="projectLeft">
+                    <h2>
+                        <a href="https://visionpalacetx.com/" target="_blank" rel="noopener noreferrer">
+                            visionpalacetx.com
+                        </a>
+                    </h2>
+                    <p>This project is a professional business website I developed and designed for a local optometry
+                        practice. This was a great opportunity for me to display my frontend development skills, and I'm
+                        very happy with how it turned out!</p>
+                </div>
+                <div class="projectRight">
+                    <img src="./images/vpcom.gif" alt="">
+                    <p>HTML | CSS | JavaScript</p>
+                </div>
+            </div>
+            <div class="projectBox">
+                <div class="projectLeft">
+                    <h2>Bầu Cua</h2>
+                    <p>This project is a recreatiion of a traditional Vietnamese gambling game with the same name. Don't
+                        worry, you can't actually gamble on it (yet 😏). Jokes aside, I was very excited to build this
+                        project, mixing my culture with my programming skills.</p>
+                </div>
+                <div class="projectRight">
+                    <img src="./images/bc.jpg" alt="">
+                    <p>Python | Flask | JavaScript | HTML | CSS</p>
+                </div>
+            </div>
+            <div class="projectBox">
+                <div class="projectLeft">
+                    <h2>
+                        <a href="https://weather-76mb.onrender.com" target="_blank" rel="noopener noreferrer">
+                            Weather App
+                        </a>
+                    </h2>
+                    <p>Just another weather application. Okay fine, I may have used a tutorial for this... but we all start
+                        somewhere, right? 😅😅</p>
+                </div>
+                <div class="projectRight">
+                    <img src="./images/weather.gif" alt="">
+                    <p>Python | Flask | HTML | CSS</p>
+                </div>
+            </div>
+            <div class="projectBox">
+                <div class="projectLeft">
+                    <h2>Work Logger</h2>
+                    <p>I used Work Logger to log my work on other coding projects. Work Logger took the numbers of hours
+                        worked in a day from user input and categorized them under different projects and categories. It
+                        could also calculate the total hours worked for each
+                        project and all projects combined.</p>
+                </div>
+                <div class="projectRight">
+                    <img src="./images/wl.png" alt="">
+                    <p>C | Terminal</p>
+                </div>
+            </div>
+        </div>
     </main>
-    <footer>
-        <div class="footer">Website Made By:&nbsp;<a href="https://www.linkedin.com/in/vdangcs/" target="_blank"
-                rel="noopener noreferrer">Vincent Dang</a></div>
-    </footer>
+    <footer></footer>
 </body>
 
 </html>
