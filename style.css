@@ -87,7 +87,6 @@ nav {
 
 main {
     padding: 56px 100px 100px 100px;
-    width: 100%;
 }
 
 #titleCont {
@@ -282,14 +281,17 @@ main {
     display: flex;
     align-items: center;
     gap: 50px;
+    border: solid var(--primary-color);
+    border-radius: 50px;
+    padding: 50px;
 }
 
 .projectLeft, .projectRight {
     width: 100%;
 }
 
-.projectLeft {
-    padding-left: 50px;
+.projectLeft h2 {
+    margin-bottom: 10px;
 }
 
 .projectRight {
@@ -300,6 +302,7 @@ main {
     width: 500px;
     border: solid var(--primary-color);
     border-radius: 5px;
+    margin-bottom: 5px;
 }
 
 .projectBox h2 {
@@ -310,12 +313,33 @@ main {
     font-size: 20px;
 }
 
+@media (max-width: 1200px) {
+    .projectRight img {
+        width: 400px;
+    }
+}
 @media (max-width: 1000px) {
     #titleCont {
         flex-direction: column;
     }
     #title {
         margin-top: 50px;
+    }
+    .projectBox {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .projectLeft {
+        text-align: center;
+    }
+}
+@media (max-width: 870px) {
+    #resumeLinks {
+        flex-direction: column;
+        gap: 5px;
+    }
+    #divider {
+        display: none;
     }
 }
 @media (max-width: 800px) {
@@ -337,35 +361,60 @@ main {
         font-size: 64px;
     }
 }
-@media (max-width: 700px) {
-    #resumeLinks {
-        font-size: 24px;
+@media (max-width: 750px) {
+    #explore {
+        font-size: 36px;
     }
 }
-@media (max-width: 600px) {
-    #resumeLinks {
-        font-size: 20px;
+@media (max-width: 700px) {
+    .projectRight img {
+        width: 300px;
     }
-    #about h1, #skillsSect h1, #explore {
+    .projectBox {
+        padding: 25px;
+    }
+}
+@media (max-width: 666px) {
+    #explore {
         font-size: 32px;
     }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+    main {
+        padding: 56px 50px 50px 50px;
+    }
+    #about h1, #skillsSect h1 {
+        font-size: 32px;
+    }
+    #resumeLinks {
+        font-size: 17px;
+    }
+}
+@media (max-width: 505px) {
     #navLeft {
         display: none;
     }
-
     #title h2 {
         font-size: 36px;
     }
     #title h1 {
         font-size: 48px;
     }
-
-    #resumeLinks {
-        font-size: 17px;
-    }
     #about h1, #skillsSect h1, #explore {
         font-size: 28px;
+    }
+    #resumeLinks {
+        font-size: 24px;
+    }
+}
+@media (max-width: 455px) {
+    main {
+        padding: 56px 25px 25px 25px;
+    }
+    #explore {
+        font-size: 24px;
+    }
+    .projectRight img {
+        width: 250px;
     }
 }
