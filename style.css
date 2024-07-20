@@ -281,8 +281,6 @@ main {
     display: flex;
     align-items: center;
     gap: 50px;
-    border: solid var(--primary-color);
-    border-radius: 50px;
     padding: 50px;
 }
 
@@ -328,6 +326,8 @@ main {
     .projectBox {
         flex-direction: column;
         gap: 25px;
+        border: solid var(--primary-color);
+        border-radius: 50px;
     }
     .projectLeft {
         text-align: center;
